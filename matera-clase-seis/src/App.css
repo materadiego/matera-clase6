@@ -1,0 +1,202 @@
+#root {
+  background-color: #333;
+  height: 100vh;
+}
+
+.App {
+  justify-content: center;
+  background-color: #222;
+}
+
+.Header {
+  background-color: #111;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15%;
+  box-shadow: 0 0 10px 3px;
+  border-bottom: 3px solid #222;
+}
+
+.LogoContainer {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  width: 250px;
+  margin: 0;
+  box-shadow: 0 0 10px 5px;
+}
+
+.Logo {
+  width: 100%;
+}
+
+.NavBar {
+  color: #1976d2;
+  height: 60px;
+  width: 500px;
+  max-width: 500px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ContenedorCarrito {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.3s;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.Carrito {
+  width: 50px;
+}
+
+.ContenedorCarrito:hover {
+  transform: scale(1.05);
+}
+
+.Numero {
+  color: #1976d2;
+  font-size: 26px;
+}
+
+.ItemListContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 30px 0;
+}
+
+.ItemCount {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 220px;
+  justify-content: center;
+  padding: 20px 0;
+  border: 4px solid #444;
+  border-radius: 4px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);
+}
+
+.ItemCountButton {
+  font-size: 26px;
+  width: 40px;
+  height: 40px;
+  background-color: #155ba1;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  border: 4px solid #1976d2;
+  transition: 0.3s;
+  will-change: scale;
+  cursor: pointer;
+}
+
+.ItemCountNumber {
+  font-size: 20px;
+  background-color: #333;
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  border-radius: 4px;
+  border: 4px solid #444;
+  will-change: transform;
+  transition: 0.3s;
+}
+
+.AgregarCarrito,
+.DetalleButton {
+  font-size: 18px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  height: 40px;
+  color: #fff;
+  border: 4px solid #1976d2;
+  border-radius: 4px;
+  background-color: #155ba1;
+  will-change: transform;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.ItemCountButton:hover,
+.AgregarCarrito:hover,
+.DetalleButton:hover {
+  background-color: #073058;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 1);
+}
+
+h2 {
+  color: #fff;
+}
+
+.ContainerCards {
+  width: 60%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Card {
+  width: 300px;
+  color: #fff;
+  padding: 10px;
+  border: 4px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);
+}
+
+.CardImage {
+  width: 300px;
+  height: 300px;
+}
+
+.CardInfo {
+  border: 4px solid #155ba1;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 1);
+}
+
+h3,
+h4,
+h5 {
+  margin: 5px 0;
+}
+
+.ItemDetail {
+  border: 2px solid red;
+  margin: 40px auto;
+  width: 900px;
+  display: flex;
+  padding: 20px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);
+  border: 4px solid #333;
+  border-radius: 8px;
+}
+
+.ItemDetail img {
+  width: 350px;
+  height: auto;
+  border: 4px solid #155ba1;
+  border-radius: 4px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 1);
+}
+
+.ItemDetailInfo {
+  margin-left: 30px;
+  font-size: 26px;
+}
