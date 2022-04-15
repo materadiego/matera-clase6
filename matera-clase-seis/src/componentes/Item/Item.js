@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 //import ItemCount from "../ItemCount";
 
 const Item = ({ product }) => {
@@ -9,7 +10,9 @@ const Item = ({ product }) => {
         <h3>{product.name}</h3>
         <h4>U${product.price}</h4>
         <h5>#{product.category}</h5>
-        <button className="DetalleButton">Ver detalle</button>
+        <Link to="/item/${product.id}" className="DetalleButton">
+          Ver detalle
+        </Link>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Cart from "./CartWidget";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const [value, setValue] = React.useState("one");
@@ -14,9 +15,11 @@ export default function NavBar() {
 
   return (
     <header className="Header">
-      <figure className="LogoContainer">
-        <img src={logo} alt="" className="Logo"></img>{" "}
-      </figure>
+      <Link to="/">
+        <figure className="LogoContainer">
+          <img src={logo} alt="" className="Logo"></img>{" "}
+        </figure>
+      </Link>
       <Box className="NavBar" sx={{ width: "100%" }}>
         <Tabs
           value={value}
@@ -25,9 +28,15 @@ export default function NavBar() {
           indicatorColor="primary"
           aria-label="secondary tabs example"
         >
-          <Tab value="one" label="Catálogo" className="MenuOptions" />
-          <Tab value="two" label="Sobre Nosotros" className="MenuOptions" />
-          <Tab value="three" label="Contacto" className="MenuOptions" />
+          <Link to="/category/tablas" className="Link">
+            <Tab value="one" label="tablas" className="MenuOptions" />
+          </Link>
+          <Link to="/category/trajes" className="Link">
+            <Tab value="two" label="trajes" className="MenuOptions" />
+          </Link>
+          <Link to="/category/accesorios" className="Link">
+            <Tab value="three" label="accesorios" className="MenuOptions" />
+          </Link>
         </Tabs>
       </Box>
       <Cart />

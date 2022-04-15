@@ -15,11 +15,9 @@ export default function ItemCount(props) {
     }
   };
 
-  function onAdd(){
-    alert ('Usted agregó ' + stock + ' unidades al carrito');
+  function onAdd() {
+    alert("Usted agregó " + stock + " unidades al carrito");
   }
-
-
 
   console.log("render");
 
@@ -34,9 +32,10 @@ export default function ItemCount(props) {
         {" "}
         +{" "}
       </button>
-      
-      <button onClick={onAdd} className="AgregarCarrito">Agregar al carrito</button>
-      
+
+      <button onClick={onAdd} className="AgregarCarrito">
+        Agregar al carrito
+      </button>
     </div>
   );
 }
