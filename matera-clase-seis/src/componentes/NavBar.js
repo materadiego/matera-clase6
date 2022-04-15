@@ -20,25 +20,17 @@ export default function NavBar() {
           <img src={logo} alt="" className="Logo"></img>{" "}
         </figure>
       </Link>
-      <Box className="NavBar" sx={{ width: "100%" }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          textColor="#888"
-          indicatorColor="primary"
-          aria-label="secondary tabs example"
-        >
-          <Link to="/category/tablas" className="Link">
-            <Tab value="one" label="tablas" className="MenuOptions" />
-          </Link>
-          <Link to="/category/trajes" className="Link">
-            <Tab value="two" label="trajes" className="MenuOptions" />
-          </Link>
-          <Link to="/category/accesorios" className="Link">
-            <Tab value="three" label="accesorios" className="MenuOptions" />
-          </Link>
-        </Tabs>
-      </Box>
+      <div className="NavBar" sx={{ width: "100%" }}>
+        <Link to="/category/tablas" className="Link">
+          TABLAS
+        </Link>
+        <Link to="/category/trajes" className="Link">
+          TRAJES
+        </Link>
+        <Link to="/category/accesorios" className="Link">
+          ACCESORIOS
+        </Link>
+      </div>
       <Cart />
     </header>
   );
