@@ -49,15 +49,6 @@ const products = [
   },
 ];
 
-const product = {
-  id: 1,
-  category: "Tablas",
-  stock: 8,
-  name: "Retro Fish 6.0",
-  price: 150,
-  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOAVNJT1tqPTIgwgV4Av17U9TWIRzy1lsHQg&usqp=CAU",
-};
-
 export const traerProductos = (categoryId) => {
   return new Promise((resolve, reject) => {
     const productosFiltrados = products.filter(
@@ -73,10 +64,13 @@ export const traerProductos = (categoryId) => {
   });
 };
 
-export const traerProducto = () => {
+export const traerProducto = (id) => {
   return new Promise((resolve, reject) => {
+    const productoElegido = products.find(
+      (producto) => producto.id === Number(id)
+    );
     setTimeout(() => {
-      resolve(product);
+      resolve(productoElegido);
     }, 2000);
   });
 };

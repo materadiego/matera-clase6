@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function ItemCount(props) {
+export default function ItemCount(props, addCart) {
   const [stock, setStock] = useState(1);
 
   const handleClickAdd = () => {
@@ -14,10 +14,6 @@ export default function ItemCount(props) {
       setStock(stock - 1);
     }
   };
-
-  function onAdd() {
-    alert("Usted agregó " + stock + " unidades al carrito");
-  }
 
   console.log("render");
 
@@ -33,7 +29,7 @@ export default function ItemCount(props) {
         +{" "}
       </button>
 
-      <button onClick={onAdd} className="AgregarCarrito">
+      <button onClick={() => addCart(stock)} className="AgregarCarrito">
         Agregar al carrito
       </button>
     </div>
